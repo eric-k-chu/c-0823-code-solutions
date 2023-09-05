@@ -10,52 +10,50 @@
   </head>
   <body>
     <h1>Coding Form!</h1>
-    <form action="index.html" method="post"></form>
-    <p>
+    <form action="index.html" method="post">
       <label for="email">Email</label>
-    </p>
-    <p>
-      <input type="email" id="email" name="user_email" />
-    </p>
-    <p>
-      <label for="coding-answer?">Why is coding cool?</label>
-    </p>
-    <select name="answer" id="answer-select">
-      <option value="">Select an option</option>
-      <option value="interesting">Because it's interesting</option>
-      <option value="fun">Because it's fun</option>
-      <option value="powerful">Because it's powerful</option>
-    </select>
-    <p>
-      <label for="favorite-language">Favorite Language (choose one)</label>
-    </p>
-    <fieldset>
-      <input type="radio" name="language" id="language_1" value="HTML" />
-      <label for="language_1">HTML</label>
+      <p>
+        <input type="email" id="email" name="user_email" />
+      </p>
 
-      <input type="radio" name="language" id="language_2" value="CSS" />
-      <label for="language_2">CSS</label>
+      <label for="coding-lang-select">Why is coding cool?</label>
+      <p>
+        <select name="answer" id="coding-lang-select">
+          <option value="">Select an option</option>
+          <option value="interesting">Because it's interesting</option>
+          <option value="fun">Because it's fun</option>
+          <option value="powerful">Because it's powerful</option>
+        </select>
+      </p>
 
-      <input type="radio" name="language" id="language_3" value="JavaScript" />
-      <label for="language_3">JavaScript</label>
-    </fieldset>
-    <p>
-      <label for="sign-up"
-        >Would you like to sign up for more information?</label
-      >
-    </p>
-    <p>
-      <input type="checkbox" id="sign-me-up" name="sign-me-up" />
-      <label for="sign-me-up">Sign me up!</label>
-    </p>
-    <p>
-      <label for="comments">Comments</label>
-    </p>
-    <p>
-      <textarea cols="35" rows="8"></textarea>
-    </p>
-    <p>
+      <label for="language-select">Favorite Language (choose one)</label>
+      <fieldset id="language-select">
+        <input type="radio" name="language" id="language_1" value="HTML" />
+        <label for="language_1">HTML</label>
+
+        <input type="radio" name="language" id="language_2" value="CSS" />
+        <label for="language_2">CSS</label>
+
+        <input
+          type="radio"
+          name="language"
+          id="language_3"
+          value="JavaScript" />
+        <label for="language_3">JavaScript</label>
+      </fieldset>
+
+      <p>Would you like to sign up for more information?</p>
+      <input type="checkbox" id="sign-up" name="sign-me-up" />
+      <label for="sign-up">Sign me up!</label>
+
+      <p>
+        <label for="comments">Comments</label>
+      </p>
+      <p>
+        <textarea cols="35" rows="8" id="comments"></textarea>
+      </p>
+
       <input type="button" id="submit" name="submit" value="Submit" />
-    </p>
+    </form>
   </body>
 </html>
