@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.column-one-third {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+}
+
+.column-one-fourth {
+  width: calc(100% / 4);
+}
+
+.column-two-thirds {
+  width: calc(100% / (3 / 2));
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+}
+
+h2,
+p {
+  margin-bottom: 0;
+}
