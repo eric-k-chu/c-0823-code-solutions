@@ -1,0 +1,54 @@
+body {
+  width: 340px;
+  margin: 0 auto;
+}
+
+h3,
+.form-labels {
+  font-family: 'Brandon Grotesque', sans-serif;
+}
+
+h3 {
+  text-align: center;
+  color: #ec5f59;
+  font-weight: 500;
+  font-size: medium;
+  margin-bottom: 1px;
+}
+
+.form-labels {
+  display: block;
+  font-weight: 500;
+  font-size: 0.6rem;
+  padding: 4px 8px;
+  margin-top: 10px;
+}
+
+.form-inputs,
+.form-select {
+  width: 100%;
+  font-family: AtlasGrotesk, sans-serif;
+  font-size: 0.6rem;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.form-select {
+  display: block;
+  color: black;
+  background-color: #f3f3f3;
+}
+
+.submit {
+  font-family: 'Brandon Grotesque', sans-serif;
+  margin-top: 8px;
+  font-size: 0.65rem;
+  float: right;
+  color: white;
+  background-color: #ec5d57;
+  border: none;
+  border-radius: 10px;
+  padding: 3px;
+  width: 62px;
+}
