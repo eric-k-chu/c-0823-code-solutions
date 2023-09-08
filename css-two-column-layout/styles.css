@@ -1,0 +1,104 @@
+body {
+  font-family: Karla, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+}
+
+.column-img-one-fourth img {
+  width: 80%;
+}
+
+.column-img-one-fourth {
+  flex-basis: 25%;
+  align-self: flex-start;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-one-half {
+  flex-basis: 50%;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text-sm {
+  font-size: 80%;
+}
+
+.text-med {
+  font-size: 90%;
+}
+
+.text-lg {
+  font-size: 300%;
+}
+
+.pr-18 {
+  padding-right: 18%;
+}
+
+.pl-18 {
+  padding-left: 18%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-hairline {
+  font-weight: 100;
+}
+
+.leading-loose {
+  line-height: 190%;
+}
+
+.ml-6 {
+  margin-left: 6%;
+}
+
+.mb-1 {
+  margin-bottom: 1%;
+}
+
+.mt-4 {
+  margin-top: 4%;
+}
+
+.mt-8 {
+  margin-top: 8%;
+}
+
+.button-learn-more {
+  color: #d14c45;
+  background-color: white;
+  border: 1px solid #d14c45;
+  padding: 8px 30px;
+  margin: 50px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-learn-more:hover {
+  background-color: #f49c97;
+}
