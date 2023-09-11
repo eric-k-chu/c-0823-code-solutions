@@ -1,0 +1,228 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-25 {
+  flex-basis: 25%;
+}
+
+.col-50 {
+  flex-basis: 50%;
+}
+
+.col-80 {
+  flex-basis: 80%;
+}
+
+.font-headline {
+  font-family: 'Tiempos Headline', serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.headline-italics {
+  font-family: 'Tiempos Headline', serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.font-avenir {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.bg-blue {
+  background-color: #294464;
+}
+
+.bg-gray {
+  background-color: #fafafa;
+}
+
+.bg-dgray {
+  background-color: #525351;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-gray {
+  color: #adadad;
+}
+
+.text-dark-gray {
+  color: #676767;
+}
+
+.button-blue {
+  color: #fff;
+  border-radius: 5px;
+  background-color: #294464;
+}
+
+.button-xs {
+  padding: 10px 20px;
+}
+
+.button-sm {
+  padding: 20px 40px;
+}
+
+.button-med {
+  padding: 25px 60px;
+}
+
+.logo {
+  width: auto;
+  height: 26px;
+}
+
+.navbar {
+  border-bottom: 2px solid #f2f3f5;
+}
+
+.mr-10 {
+  margin-right: 10%;
+}
+
+.ml-5 {
+  margin-left: 5%;
+}
+
+.ml-10 {
+  margin-left: 10%;
+}
+
+.bg-img {
+  background-image: linear-gradient(
+      rgba(21, 21, 21, 0.5),
+      rgba(21, 21, 21, 0.5)
+    ),
+    url('images/hero.jpg');
+}
+
+.text-lg {
+  font-size: 3em;
+}
+
+.text-med {
+  font-size: 2em;
+}
+
+.text-sm {
+  font-size: 1.5em;
+}
+
+.text-xs {
+  font-size: 1em;
+}
+
+.h-100 {
+  height: 100px;
+}
+
+.h-500 {
+  height: 500px;
+}
+
+.h-800 {
+  height: 800px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.leading-30 {
+  line-height: 30px;
+}
+
+.leading-40 {
+  line-height: 40px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.gap-50 {
+  gap: 50px;
+}
+
+.gap-300 {
+  gap: 300px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.mb-minus-20 {
+  margin-bottom: -20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
