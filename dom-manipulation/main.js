@@ -2,13 +2,10 @@ let numOfClicks = 0;
 const $buttonHot = document.querySelector('.hot-button');
 const $clickCount = document.querySelector('.click-count');
 
-function incrementClick() {
+function handleClick(event) {
   numOfClicks++;
   $clickCount.textContent = 'Clicks: ' + numOfClicks;
-}
-$buttonHot.addEventListener('click', incrementClick);
 
-function updateClassName(event) {
   if (numOfClicks < 4) {
     event.target.className = 'hot-button cold';
   } else if (numOfClicks < 7) {
@@ -23,4 +20,4 @@ function updateClassName(event) {
     event.target.className = 'hot-button nuclear';
   }
 }
-$buttonHot.addEventListener('click', updateClassName);
+$buttonHot.addEventListener('click', handleClick);
