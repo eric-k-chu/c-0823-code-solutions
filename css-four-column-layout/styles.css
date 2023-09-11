@@ -1,0 +1,40 @@
+body {
+  font-family: Barlow, sans-serif;
+  background-color: #f7f8fa;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-20 {
+  flex-basis: 20%;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.screens {
+  width: 90%;
+}
+
+.icons {
+  width: 20%;
+}
