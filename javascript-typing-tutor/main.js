@@ -17,4 +17,6 @@ function handleKeyDown(event) {
   }
 }
 
-$letters.forEach(addEventListener('keydown', handleKeyDown));
+const $letter = document.querySelector('.container');
+
+$letter.addEventListener('keydown', handleKeyDown);
