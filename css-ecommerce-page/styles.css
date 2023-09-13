@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.col-15 {
+  flex-basis: 15%;
+}
+
+.items {
+  width: 90%;
+  height: 100%;
+}
+
+.item-size,
+.retail-price {
+  color: #d4d4d4;
+}
+
+.disc-price {
+  background-color: #fff1e6;
+  border-radius: 5px;
+}
+
+.retail-price {
+  text-decoration-line: line-through;
+}
+
+.header {
+  font-weight: 900;
+}
+
+.price {
+  margin-top: 1px;
+}
+
+.text-sm {
+  font-size: small;
+}
