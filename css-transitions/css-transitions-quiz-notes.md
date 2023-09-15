@@ -6,6 +6,8 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 - The `transition` property is shorthand for which four CSS properties?
 
+delay, duration, property, timing-functions
+
 ## Notes
 
 All student notes should be written here.
