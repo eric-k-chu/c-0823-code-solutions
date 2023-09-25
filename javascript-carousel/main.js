@@ -30,7 +30,7 @@ function imgCarousel() {
 }
 
 function setActive(index) {
-  $img.src = imgContainer[imgIndex];
+  $img.src = imgContainer[index];
   $navCircles[index].className = 'fa-sharp fa-solid fa-circle';
 }
 
