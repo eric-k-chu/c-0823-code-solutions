@@ -1,0 +1,42 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.row {
+  display: flex;
+}
+
+.img-wrapper img {
+  width: 100%;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.nav-arrows {
+  font-size: 3rem;
+}
+
+.nav-button {
+  border: none;
+  background-color: transparent;
+}
+
+.nav-button:active {
+  transform: scale(1.1);
+}
+
+.gap-sm {
+  gap: 0.5rem;
+}
