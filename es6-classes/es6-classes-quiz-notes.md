@@ -10,7 +10,7 @@ a template for creating objects
 
 - When would you want to use a class?
 
-when you want to encapsulate data and behaviour into one object.
+when you want to encapsulate data and behaviour into one object for reuseability.
 
 - How do you declare a class?
 
@@ -22,11 +22,11 @@ extends keyword followed by class name
 
 - Why would you want to inherit from another class?
 
-if previous class has properties and methods you want to use
+if you want to build upon an existing class or specify a new implementation while maintaining the same behaviour
 
 - How do you add methods and properties to a class?
 
-just write it in the class body
+just write it in the class body or use the .prototype keyword (className.prototype.functionName() {})
 
 ## Notes
 
