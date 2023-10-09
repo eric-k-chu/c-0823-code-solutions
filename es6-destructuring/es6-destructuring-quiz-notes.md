@@ -10,11 +10,11 @@ unpacking values from arrays and objects into distinct variables
 
 - What is the syntax for `Object` destructuring?
 
-use square brackets to declare variables
+use curly brackets to declare variables
 
 - What is the syntax for `Array` destructuring?
 
-use curly brackets to declare variables
+use square brackets to declare variables
 
 - How can you tell the difference between destructuring and creating `Object`/`Array` literals?
 
