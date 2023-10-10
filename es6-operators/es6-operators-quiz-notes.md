@@ -20,8 +20,8 @@ For ||, if an operand is evaluated to true, the operator will stop evaluating an
 
 - What is the `??` (nullish coalescing) operator and how does it differ from `||`?
 
-?? checks if the left hand operand is null or undefined. So things like '' or 0 do not pass.
-|| justs checks if one of the operands is truthy. So things like '' or 0 do pass.
+?? checks if the left hand operand is null or undefined. So things like 0 do pass.
+|| justs checks if one of the operands is truthy. So things like '' or 0 do not pass.
 
 - What is the `?:` (ternary) operator? How does it differ from `if/else`?
 
