@@ -5,7 +5,7 @@ const priceObjs = prices.map((element) => ({
   salePrice: element / 2,
 }));
 
-const formattedPrices = prices.map((element) => `$${element}`);
+const formattedPrices = prices.map((element) => `$${element.toFixed(2)}`);
 
 console.log('Price objects', priceObjs);
 console.log('Formatted prices', formattedPrices);
