@@ -25,7 +25,7 @@ For ||, if an operand is evaluated to true, the operator will stop evaluating an
 
 - What is the `?:` (ternary) operator? How does it differ from `if/else`?
 
-?: is just a short-handed expression to an if/else. Ternary operators are a single statement vs if/else is a block of code.
+?: is just a short-handed expression to an if/else. Ternary operators can be used to assign values.
 
 - What is the `?.` (optional chaining) operator? When would you use it?
 
