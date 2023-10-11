@@ -12,7 +12,7 @@ function uniqueLinear(words) {
     if (!seen[word]) {
       // 2 * n = O(2n)
       seen[word] = true; // 2 * n = O(2n)
-      unique[unique.length] = word; // 3 * n = O(2n)
+      unique[unique.length] = word; // 2 * n = O(2n)
     }
   }
   return unique; // 1 * 1 = O(1)
@@ -39,8 +39,8 @@ function uniqueQuadratic(words) {
       }
     }
     if (isUnique) {
-      // 1 * n*n = O(n^2)
-      unique[unique.length] = word; // 3 * n*n = O(3n^2)
+      // 1 * n = O(n)
+      unique[unique.length] = word; // 2 * n = O(3n)
     }
   }
   return unique; // 1 * 1 = O(1)
