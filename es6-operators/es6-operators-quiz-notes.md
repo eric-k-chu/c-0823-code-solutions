@@ -40,7 +40,7 @@ to shallow copy an object
 
 - What data types can be spread into an array? Into an object?
 
-all data types can be spread into an array. For objects, only other objects that are iterable.
+only iterables into an array. For objects, anything that has its own properties
 
 - How does spread syntax differ from rest syntax?
 
