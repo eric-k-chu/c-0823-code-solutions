@@ -20,12 +20,12 @@ For ||, if an operand is evaluated to true, the operator will stop evaluating an
 
 - What is the `??` (nullish coalescing) operator and how does it differ from `||`?
 
-?? checks if the left hand operand is null or undefined. So things like '' or 0 do not pass.
-|| justs checks if one of the operands is truthy. So things like '' or 0 do pass.
+?? checks if the left hand operand is null or undefined. So things like 0 do pass.
+|| justs checks if one of the operands is truthy. So things like '' or 0 do not pass.
 
 - What is the `?:` (ternary) operator? How does it differ from `if/else`?
 
-?: is just a short-handed expression to an if/else. Ternary operators are a single statement vs if/else is a block of code.
+?: is just a short-handed expression to an if/else. Ternary operators can be used to assign values.
 
 - What is the `?.` (optional chaining) operator? When would you use it?
 
@@ -40,7 +40,7 @@ to shallow copy an object
 
 - What data types can be spread into an array? Into an object?
 
-all data types can be spread into an array. For objects, only other objects that are iterable.
+only iterables into an array. For objects, anything that has its own properties
 
 - How does spread syntax differ from rest syntax?
 
