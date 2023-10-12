@@ -10,11 +10,11 @@ same as in JS, an action that could be triggered as a result of a user action
 
 - What is an "event handler"? Which component declares the handler?
 
-something that handles what occurs after the event is triggered. The handler is declared by the parent
+something that handles what occurs after the event is triggered. The handler is declared by the parent of the component
 
 - How do you pass an event handler to a React component?
 
-as a prop.
+eventHandlerPropName = {event handler function}, pass it as a prop enclosed in {}
 
 - What is the naming convention for event handlers?
 
