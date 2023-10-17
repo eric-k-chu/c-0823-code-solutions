@@ -32,6 +32,6 @@ async function readChained() {
   console.log(elapsed(), 'readChained2:', response3);
 }
 
-readOnce()
-  .then(() => readSeveral())
-  .then(() => readChained());
+await readOnce();
+await readSeveral();
+await readChained();
