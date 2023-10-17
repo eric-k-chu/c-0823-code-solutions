@@ -5,12 +5,6 @@ import read from './read.js';
 const startTime = Date.now();
 const elapsed = () => `${Math.round((Date.now() - startTime) / 1000)}s -`;
 
-// function readOnce() {
-//   return read('foo/bar.html').then((msg) =>
-//     console.log(elapsed(), 'readOnce:', msg)
-//   );
-// }
-
 async function readOnce() {
   const response = await read('foo/bar.html');
   console.log(elapsed(), 'readOnce:', response);
