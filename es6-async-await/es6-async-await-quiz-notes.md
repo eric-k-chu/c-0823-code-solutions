@@ -36,7 +36,7 @@ The catch block will contain statements that specifiy what to do if an exception
 
 - What happens if you forget to use `await` on a Promise? In that case, what happens to the Promise rejection?
 
-the promise will be perma pending if no rejection. If there is a rejection, the program will crash
+It will just return a promise that is in pending state. If there is a rejection, the program will crash
 
 - Which style of asynchronous programming do you prefer — callbacks, `Promise.then`, or `async/await`? Why?
 
