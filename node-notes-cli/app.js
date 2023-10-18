@@ -9,7 +9,7 @@ async function readJSON() {
     operation !== 'update' &&
     operation !== 'delete'
   ) {
-    throw new Error('Invalid operation');
+    throw new Error(`Invalid operation: ${operation}`);
   }
 
   const dataStr = await readFile('./data.json', 'utf8');
