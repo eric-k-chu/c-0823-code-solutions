@@ -20,21 +20,12 @@ async function throwOnce() {
 async function throwSeveral() {
   try {
     const response1 = await read('foo1', true);
-    if (!response1) {
-      throw response1;
-    }
     console.log(elapsed(), 'throwSeveral1:', response1);
 
     const response2 = await read('foo2', true);
-    if (!response2) {
-      throw response2;
-    }
     console.log(elapsed(), 'throwSeveral2:', response2);
 
     const response3 = await read('foo3', false);
-    if (!response3) {
-      throw response3;
-    }
     console.log(elapsed(), 'throwSeveral3:', response3);
   } catch (e) {
     console.log(elapsed(), 'throwSeveral Error:', e.message);
@@ -44,21 +35,12 @@ async function throwSeveral() {
 async function throwChained() {
   try {
     const response1 = await read('foo-chain', false);
-    if (!response1) {
-      throw response1;
-    }
     console.log(elapsed(), 'throwChained1:', response1);
 
     const response2 = await read(response1);
-    if (!response2) {
-      throw response2;
-    }
     console.log(elapsed(), 'throwChained2:', response2);
 
     const response3 = await read(response2);
-    if (!response3) {
-      throw response3;
-    }
     console.log(elapsed(), 'throwChained3:', response3);
   } catch (e) {
     console.log(elapsed(), 'throwChained Error:', e.message);
