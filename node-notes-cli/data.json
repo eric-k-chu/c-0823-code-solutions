@@ -1,9 +1,9 @@
 {
-  "nextId": 39,
+  "nextId": 40,
   "notes": {
     "32": "In JavaScript, the value of `this` is determined when a function is called; not when it is defined.",
     "34": "CRAZY",
-    "37": "apple",
-    "38": "oval"
+    "38": "oval",
+    "39": "fd"
   }
 }

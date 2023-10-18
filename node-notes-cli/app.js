@@ -47,7 +47,9 @@ async function readJSON() {
     }
   }
   const newDataStr = JSON.stringify(data, null, 2);
-  await writeFile('./data.json', newDataStr);
+  if (dataStr !== newDataStr) {
+    await writeFile('./data.json', newDataStr);
+  }
 }
 
 try {
