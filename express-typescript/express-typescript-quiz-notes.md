@@ -14,6 +14,8 @@ because it helps reduce a lot of bugs when writing code
 
 - What is a convenient way to run an Express server written in TypeScript?
 
+ts-node-esm server.ts
+
 ## Notes
 
 All student notes should be written here.
