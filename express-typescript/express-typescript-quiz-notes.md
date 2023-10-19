@@ -10,7 +10,7 @@ strongly typed programming language that builds on javascript
 
 - Why is TypeScript popular?
 
-because it helps reduce a lot of bugs when writing code
+because type safety helps reduce a lot of bugs when writing code and improves code maintainability
 
 - What is a convenient way to run an Express server written in TypeScript?
 
