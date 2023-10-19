@@ -38,6 +38,12 @@
       }
     },
     {
+      "files": ["*.test.js"],
+      "env": {
+        "mocha": true
+      }
+    },
+    {
       "files": ["**/*.html"],
       "plugins": ["eslint-plugin-html"]
     }
