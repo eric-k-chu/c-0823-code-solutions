@@ -36,6 +36,10 @@
       "rules": {
         "@typescript-eslint/no-explicit-any": "off"
       }
+    },
+    {
+      "files": ["**/*.html"],
+      "plugins": ["eslint-plugin-html"]
     }
   ]
 }
