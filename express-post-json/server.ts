@@ -45,10 +45,10 @@ app.get('/api/grades', (req, res) => {
 app.post('/api/grades', (req, res) => {
   if (!req.body.name || !req.body.course || !req.body.score) {
     return res
+      .status(404)
       .send(
         'You have missing fields. Please follow the format of name, course, and score.'
-      )
-      .status(404);
+      );
   }
 
   const newGrade: Grade = {
@@ -58,7 +58,7 @@ app.post('/api/grades', (req, res) => {
     score: req.body.score,
   };
   grades[nextId++] = newGrade;
-  return res.json(newGrade).status(201);
+  return res.status(201).json(newGrade);
 });
 
 app.listen(8080, () => {
