@@ -19,7 +19,7 @@ image files, video files, js files, css files, html files
 
 - What is a good way to serve application images using Express?
 
-create a public directory and place the images there.
+use express.static() middleware function and place the images inside the root dir
 
 ## Notes
 
