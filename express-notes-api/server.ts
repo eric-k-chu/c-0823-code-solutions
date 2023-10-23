@@ -15,8 +15,9 @@ type Data = {
   notes: Record<number, Note>;
 };
 
-async function readJSON(): Promise<string> {
-  return await readFile('./data.json', 'utf8');
+async function readJSON(): Promise<Data> {
+  const file = await readFile('./data.json', 'utf8');
+  return JSON.parse(file);
 }
 
 async function writeJSON(data: Data): Promise<void> {
@@ -26,8 +27,7 @@ async function writeJSON(data: Data): Promise<void> {
 
 app.get('/api/notes', async (req, res) => {
   try {
-    const file = await readJSON();
-    const data = JSON.parse(file);
+    const data = await readJSON();
     res.json(Object.values(data.notes));
   } catch (e) {
     console.error(e);
@@ -37,8 +37,7 @@ app.get('/api/notes', async (req, res) => {
 
 app.get('/api/notes/:id', async (req, res) => {
   try {
-    const file = await readJSON();
-    const data = JSON.parse(file);
+    const data = await readJSON();
     const { id } = req.params;
 
     if (+id <= 0 || !Number.isInteger(+id)) {
@@ -59,8 +58,7 @@ app.get('/api/notes/:id', async (req, res) => {
 
 app.post('/api/notes', async (req, res) => {
   try {
-    const file = await readJSON();
-    const data = JSON.parse(file);
+    const data = await readJSON();
     const { content } = req.body;
 
     if (!content) {
@@ -79,8 +77,7 @@ app.post('/api/notes', async (req, res) => {
 
 app.delete('/api/notes/:id', async (req, res) => {
   try {
-    const file = await readJSON();
-    const data = JSON.parse(file);
+    const data = await readJSON();
     const { id } = req.params;
 
     if (+id <= 0 || !Number.isInteger(+id)) {
@@ -104,8 +101,7 @@ app.delete('/api/notes/:id', async (req, res) => {
 
 app.put('/api/notes/:id', async (req, res) => {
   try {
-    const file = await readJSON();
-    const data = JSON.parse(file);
+    const data = await readJSON();
     const { id } = req.params;
     const { content } = req.body;
 
@@ -125,7 +121,7 @@ app.put('/api/notes/:id', async (req, res) => {
 
     data.notes[+id].content = content;
     await writeJSON(data);
-    res.json(data.notes[id]);
+    res.json(data.notes[+id]);
   } catch (e) {
     console.error(e);
     res.status(500).json({ error: 'An unexpected error occurred.' });
