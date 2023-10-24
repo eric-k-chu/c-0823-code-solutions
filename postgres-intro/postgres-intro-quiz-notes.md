@@ -10,7 +10,7 @@ To store large amounts of data
 
 - What is PostgreSQL and what are some alternative relational databases?
 
-postgresql is a relational database system. ALternatives include MySQL and TinySQL
+postgresql is a relational database management system. ALternatives include MySQL and TinySQL
 
 - What are some advantages of learning a relational database?
 
