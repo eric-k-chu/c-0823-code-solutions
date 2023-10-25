@@ -47,12 +47,6 @@ app.get('/api/grades', async (req, res, next) => {
     `;
     const result = await db.query(sql);
     const grades = Object.values(result.rows);
-    if (!grades) {
-      throw new ClientError(
-        500,
-        `An unexpected error has occured with our database.`
-      );
-    }
     res.json(grades);
   } catch (err) {
     next(err);
@@ -86,12 +80,6 @@ app.post('/api/grades', async (req, res, next) => {
     const params = [name, course, score];
     const result = await db.query(sql, params);
     const grade = result.rows[0];
-    if (!grade) {
-      throw new ClientError(
-        500,
-        `An unexpected error has occured with our database.`
-      );
-    }
     res.json(grade);
   } catch (err) {
     next(err);
@@ -134,15 +122,8 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
     const result = await db.query(sql, params);
     const grade = result.rows;
 
-    if (grade.length < 1) {
+    if (!grade) {
       throw new ClientError(404, `Cannot find grade with "gradeId" ${gradeId}`);
-    }
-
-    if (grade === undefined) {
-      throw new ClientError(
-        500,
-        `An unexpected error has occured with our database.`
-      );
     }
     res.json(grade[0]);
   } catch (err) {
@@ -168,15 +149,8 @@ app.delete('/api/grades/:gradeId', async (req, res, next) => {
     const result = await db.query(sql, params);
     const grade = result.rows;
 
-    if (grade.length < 1) {
+    if (!grade) {
       throw new ClientError(404, `Cannot find grade with "gradeId" ${gradeId}`);
-    }
-
-    if (grade === undefined) {
-      throw new ClientError(
-        500,
-        `An unexpected error has occured with our database.`
-      );
     }
     res.sendStatus(204);
   } catch (err) {
