@@ -4,9 +4,7 @@ import { useState } from 'react';
 
 function App() {
   const [count, setCount] = useState(0);
-  const [color, setColor] = useState<string>('hot');
-  console.log(count);
-  console.log(color);
+  const [color, setColor] = useState('hot');
 
   function handleClick(): void {
     switch (count) {
