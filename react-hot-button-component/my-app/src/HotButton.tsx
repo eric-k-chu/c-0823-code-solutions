@@ -8,7 +8,7 @@ type Props = {
 export function HotButton({ count, onClick }: Props) {
   let color;
   if (count < 3) {
-    color = 'hot';
+    color = 'hot-0';
   } else if (count < 6) {
     color = 'hot-3';
   } else if (count < 9) {
