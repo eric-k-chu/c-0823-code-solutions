@@ -1,5 +1,6 @@
 import './App.css';
-import { Button } from './button';
+import { HotButton } from './hot-button';
+import { Counter } from './counter';
 import { useState } from 'react';
 
 function App() {
@@ -32,13 +33,8 @@ function App() {
 
   return (
     <div className="flex container justify-center items-center mx-auto h-screen text-black gap-8">
-      <Button
-        style={`${color} p-4 rounded-md border-2 border-black hover:border-amber-400`}
-        onClick={handleClick}
-      />
-      <h3 className="flex justify-center items-center bg-[#FFBF00] rounded-md min-w-[4rem] h-14 px-2 shadow-md">
-        {count < 2 ? count + ' click' : count + ' clicks'}
-      </h3>
+      <HotButton color={color} onClick={handleClick} />
+      <Counter count={count} />
     </div>
   );
 }
