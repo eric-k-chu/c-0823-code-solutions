@@ -1,0 +1,11 @@
+                                           Table "public.grades"
+  Column   |            Type             | Collation | Nullable |                  Default                  
+-----------+-----------------------------+-----------+----------+-------------------------------------------
+ gradeId   | integer                     |           | not null | nextval('"grades_gradeId_seq"'::regclass)
+ name      | text                        |           | not null | 
+ course    | text                        |           | not null | 
+ score     | integer                     |           | not null | 
+ createdAt | timestamp(6) with time zone |           | not null | now()
+Indexes:
+    "grades_pkey" PRIMARY KEY, btree ("gradeId")
+
