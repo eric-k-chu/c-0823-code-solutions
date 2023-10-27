@@ -4,7 +4,7 @@ export function ToggleSwitch() {
   const [isOn, setIsOn] = useState(false);
 
   function handleToggleOn() {
-    setIsOn(() => !isOn);
+    setIsOn(!isOn);
   }
 
   const on =
