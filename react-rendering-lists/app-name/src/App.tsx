@@ -1,6 +1,6 @@
-import { PokemonList } from './PokemonList';
+import { PokemonList, PokeEntry } from './PokemonList';
 
-const pokedex = [
+const pokedex: PokeEntry[] = [
   { number: '001', name: 'Bulbasaur' },
   { number: '004', name: 'Charmander' },
   { number: '007', name: 'Squirtle' },
