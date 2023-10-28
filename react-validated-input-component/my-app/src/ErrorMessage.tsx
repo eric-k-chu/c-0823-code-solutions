@@ -1,8 +1,17 @@
-import {
-  containsSpecialChar,
-  containsDigit,
-  containsUpperCase,
-} from './validate.ts';
+function containsUpperCase(pw: string): boolean {
+  const regex = /(?=.*[A-Z]).*/;
+  return regex.test(pw);
+}
+
+function containsDigit(pw: string): boolean {
+  const regex = /(?=.*\d).*/;
+  return regex.test(pw);
+}
+
+function containsSpecialChar(pw: string): boolean {
+  const regex = /(?=.*[!@#$%^&*()]).*/;
+  return regex.test(pw);
+}
 
 type Props = {
   password: string;
