@@ -8,7 +8,7 @@ const quotes: string[] = [
   "You're a little scary sometimes, you know that? Brilliant...but scary.",
   'There will be no foolish wand-waving or silly incantations in this class.',
   'It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.',
-  'If there is one thing voldemort cannot understand, it is love.',
+  'If there is one thing Voldemort cannot understand, it is love.',
   'As much money and life as you could want!',
   'The truth. It is a beautiful and terrible thing, and should therefore be treated with great caution.',
   "There are some things you can't share without ending up liking each other.",
