@@ -14,11 +14,7 @@ export function RotatingBanner({ items }: Props) {
   }
 
   function handleDecrementIndex(): void {
-    if (currentIndex === 0) {
-      setCurrentIndex(items.length - 1);
-    } else {
-      setCurrentIndex(currentIndex - 1);
-    }
+    setCurrentIndex((currentIndex - 1 + items.length) % items.length);
   }
 
   function handleSetIndex(index: number): void {
