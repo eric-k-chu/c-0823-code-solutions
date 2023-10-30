@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { FormEvent, useState } from 'react';
 
 export function RegistrationFormControlled() {
   const [username, setUsername] = useState('');
@@ -10,16 +10,6 @@ export function RegistrationFormControlled() {
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     console.log('controlled:', username, password);
-  }
-
-  function handleUsername(e: ChangeEvent) {
-    const value = (e.target as HTMLInputElement).value;
-    setUsername(value);
-  }
-
-  function handlePassword(e: ChangeEvent) {
-    const value = (e.target as HTMLInputElement).value;
-    setPassword(value);
   }
 
   return (
@@ -35,7 +25,7 @@ export function RegistrationFormControlled() {
             className={inputCn}
             type="text"
             autoComplete="off"
-            onChange={(e) => handleUsername(e)}
+            onChange={(e) => setUsername(e.target.value)}
           />
         </label>
         <label>
@@ -44,7 +34,7 @@ export function RegistrationFormControlled() {
             value={password}
             className={inputCn}
             type="password"
-            onChange={(e) => handlePassword(e)}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </label>
       </div>
