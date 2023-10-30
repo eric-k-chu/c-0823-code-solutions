@@ -12,8 +12,6 @@ export function Stopwatch() {
       timer = setInterval(() => {
         setCount((prev) => prev + 1);
       }, 1000);
-    } else {
-      clearInterval(timer ?? 0);
     }
 
     return () => clearInterval(timer ?? 0);
