@@ -11,7 +11,7 @@ export function FilteredList({ list, query }: Props) {
       {filteredList.length > 0 ? (
         filteredList.map((n, i) => <li key={i}>{n}</li>)
       ) : (
-        <li key={0}>No Items match the filter</li>
+        <li key={0}>No items match the filter.</li>
       )}
     </ul>
   );
