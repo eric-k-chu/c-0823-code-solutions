@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import { FaBars } from 'react-icons/fa';
 import { AppDrawer } from './AppDrawer';
-import React from 'react';
+
+const heading = 'Menu';
+const links: string[] = ['About', 'Get Started', 'Sign In'];
 
 export function HomePage() {
-  const [showDrawer /*setShowDrawer*/] = useState(false);
+  const [header, setHeader] = useState(links[0]);
+
   return (
-    <div className="flex basis-full p-8 bg-[#242424]">
-      <FaBars />
-      {showDrawer && <AppDrawer />}
+    <div className="flex w-full basis-1/12 min-h-[4rem] bg-[#242424] items-center">
+      <AppDrawer heading={heading} links={links} onSelect={setHeader} />
+      <span className="text-white">{header}</span>
     </div>
   );
 }
