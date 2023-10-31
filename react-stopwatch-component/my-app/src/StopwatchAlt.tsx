@@ -1,24 +1,26 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FaPlay, FaPause } from 'react-icons/fa6';
 
-export function Stopwatch() {
+export function StopwatchAlt() {
   const [count, setCount] = useState(0);
+  const [timer, setTimer] = useState(0);
   const [isPaused, setIsPaused] = useState(true);
 
-  useEffect(() => {
-    let timer: number | null = null;
-
+  function handlePlay(): void {
     if (!isPaused) {
-      timer = setInterval(() => {
-        setCount((prev) => prev + 1);
-      }, 1000);
+      clearInterval(timer);
+    } else {
+      const timeId = setInterval(() => setCount((prev) => prev + 1), 1000);
+      setTimer(timeId);
     }
-
-    return () => clearInterval(timer ?? 0);
-  }, [count, isPaused]);
+    setIsPaused(!isPaused);
+  }
 
   function handleReset(): void {
-    if (isPaused) setCount(0);
+    if (isPaused) {
+      setCount(0);
+      setIsPaused(true);
+    }
   }
 
   return (
@@ -30,9 +32,7 @@ export function Stopwatch() {
         } flex justify-center items-center rounded-full border-black border-[16px] w-60 h-60`}>
         <p className="text-5xl font-semibold select-none">{count}</p>
       </div>
-      <button
-        className="hover:cursor-pointer"
-        onClick={() => setIsPaused(!isPaused)}>
+      <button className="hover:cursor-pointer" onClick={handlePlay}>
         {isPaused ? <FaPlay size={42} /> : <FaPause size={42} />}
       </button>
     </div>
