@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="flex flex-col h-screen w-screen bg-white">
-      <div className="flex w-full basis-1/12 min-h-[4rem] bg-[#242424] items-center gap-x-4 px-8 text-white">
+      <div className="flex w-full basis-1/12 bg-[#242424] items-center gap-x-4 px-8 text-white">
         <AppDrawer heading="Menu" links={links} onSelect={setHeader} />
         <span className="text-xl font-semibold">{header}</span>
       </div>
