@@ -15,10 +15,10 @@ export function List() {
     async function getItems() {
       try {
         setItems(await readItems());
-        setIsLoading(false);
       } catch (err) {
-        setIsLoading(false);
         setError(err);
+      } finally {
+        setIsLoading(false);
       }
     }
     getItems();
