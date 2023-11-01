@@ -9,52 +9,41 @@ type Props = {
 
 export function Carousel({ images }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [timeoutId, setTimeoutId] = useState<number>();
 
   useEffect(() => {
     let id = 0;
-    if (!isPaused) {
-      console.log('carousel started');
-      id = setInterval(
+    if (timeoutId === undefined) {
+      id = setTimeout(
         () => setCurrentIndex((prev) => (prev + 1) % images.length),
         3000
       );
     }
-    return () => clearInterval(id);
-  }, [isPaused, timeoutId, images.length]);
+    return () => clearTimeout(id);
+  }, [currentIndex, timeoutId, images.length]);
 
   function handleIncrementClick(): void {
     setCurrentIndex((currentIndex + 1) % images.length);
-    setIsPaused(true);
     timeoutCarousel();
   }
 
   function handleDecrementClick(): void {
     setCurrentIndex((currentIndex - 1 + images.length) % images.length);
-    setIsPaused(true);
     timeoutCarousel();
   }
 
   function handleSelectionClick(index: number): void {
     setCurrentIndex(index);
-    setIsPaused(true);
     timeoutCarousel();
   }
 
-  // Pauses the carousel for 3 seconds
   function timeoutCarousel() {
-    console.log('timeout started');
-    if (isPaused) {
-      console.log('timeout cleared');
-      clearTimeout(timeoutId);
-    }
-    setTimeoutId(
-      setTimeout(() => {
-        setIsPaused(false);
-        console.log('timeout ended');
-      }, 3000)
-    );
+    clearTimeout(timeoutId);
+    const id = setTimeout(() => {
+      setTimeoutId(undefined);
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    setTimeoutId(id);
   }
 
   function capitalizedName(imgUrl: string): string {

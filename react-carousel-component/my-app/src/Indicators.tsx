@@ -9,9 +9,9 @@ type Props = {
 export function Indicators({ items, currentIndex, onSelect }: Props) {
   return (
     <div className="flex justify-evenly items-center w-3/5 basis-1/12">
-      {items.map((_, i) => (
+      {items.map((n, i) => (
         <div
-          key={i}
+          key={i + n}
           onClick={() => onSelect(i)}
           className="hover:cursor-pointer">
           {currentIndex === i ? <BiSolidCircle /> : <BiCircle />}
