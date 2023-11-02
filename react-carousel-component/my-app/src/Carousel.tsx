@@ -9,41 +9,26 @@ type Props = {
 
 export function Carousel({ images }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [timeoutId, setTimeoutId] = useState<number>();
 
   useEffect(() => {
-    let id = 0;
-    if (timeoutId === undefined) {
-      id = setTimeout(
-        () => setCurrentIndex((prev) => (prev + 1) % images.length),
-        3000
-      );
-    }
+    const id = setTimeout(
+      () => setCurrentIndex((currentIndex + 1) % images.length),
+      3000
+    );
+
     return () => clearTimeout(id);
-  }, [currentIndex, timeoutId, images.length]);
+  }, [currentIndex, images.length]);
 
   function handleIncrementClick(): void {
     setCurrentIndex((currentIndex + 1) % images.length);
-    timeoutCarousel();
   }
 
   function handleDecrementClick(): void {
     setCurrentIndex((currentIndex - 1 + images.length) % images.length);
-    timeoutCarousel();
   }
 
   function handleSelectionClick(index: number): void {
     setCurrentIndex(index);
-    timeoutCarousel();
-  }
-
-  function timeoutCarousel() {
-    clearTimeout(timeoutId);
-    const id = setTimeout(() => {
-      setTimeoutId(undefined);
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
-    setTimeoutId(id);
   }
 
   function capitalizedName(imgUrl: string): string {
