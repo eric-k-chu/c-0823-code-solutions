@@ -63,7 +63,7 @@ app.post('/api/auth/sign-in', async (req, res, next) => {
       throw new ClientError(401, 'invalid login');
     }
     /* your code starts here */
-    const sql = `SELECT * FROM "users" WHERE "username" = $1`;
+    const sql = `SELECT "userId","hashedPassword" FROM "users" WHERE "username" = $1`;
     const params = [username];
     const result = await db.query(sql, params);
     const user = result.rows[0];
