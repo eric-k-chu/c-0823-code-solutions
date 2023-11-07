@@ -5,21 +5,15 @@ import { ClientError } from './client-error.js';
 const hashKey = process.env.TOKEN_SECRET;
 if (!hashKey) throw new Error('TOKEN_SECRET not found in .env');
 
-type AuthenticatedUser = {
-  userId: number;
-  username: string;
-  iat: number;
-};
-
 export function authMiddleware(
   req: Request,
   res: Response,
   next: NextFunction
 ) {
   const auth = req.headers.authorization;
-  const token = auth && auth.split('Bearer ')[1];
+  const token = auth?.split('Bearer ')[1];
   if (!token) throw new ClientError(401, 'authentication required');
-  req.user = jwt.verify(token, hashKey ?? '') as AuthenticatedUser;
+  req.user = jwt.verify(token, hashKey ?? '') as Request['user'];
   next();
 }
 
