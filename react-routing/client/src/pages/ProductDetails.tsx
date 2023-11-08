@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { fetchProduct, type Product, toDollars } from '../lib';
 import './ProductDetails.css';
-import { Link, useMatch } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export function ProductDetails() {
   // TODO: Retrieve productId from the route
-  const productId = useMatch('/details/:productId').params.productId;
+  const { productId } = useParams();
   const [product, setProduct] = useState<Product>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
