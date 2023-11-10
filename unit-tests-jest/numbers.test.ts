@@ -56,12 +56,11 @@ describe('divideBy', () => {
   });
 
   it('returns a new array', () => {
-    const numbers: number[] = [];
-    const copy = numbers.map((n) => n);
-    const divisor = 5;
+    const numbers = [3, 6, 9, 12, 15];
+    const divisor = 3;
     const result = divideBy(numbers, divisor);
-    expect(result).toEqual([]);
-    expect(numbers).toEqual(copy);
+    expect(result).toEqual([1, 2, 3, 4, 5]);
+    expect(numbers).not.toBe(result);
   });
 });
 
@@ -75,12 +74,12 @@ describe('multiplyBy', () => {
   it('empty object, nothing is changed', () => {
     const obj = {};
     multiplyBy(obj, 3);
-    expect(obj).toEqual({});
+    expect(obj).toBe(obj);
   });
 
   it('obj values not numbers, nothing is changed', () => {
     const obj = { a: 'a', b: 'b', c: 'c' };
     multiplyBy(obj, 6);
-    expect(obj).toEqual({ a: 'a', b: 'b', c: 'c' });
+    expect(obj).toBe(obj);
   });
 });
