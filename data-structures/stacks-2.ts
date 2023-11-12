@@ -1,9 +1,8 @@
 import { Stack } from './lib/stack';
 
 export function countValues<T>(stack: Stack<T>): number {
-  let count = 0;
-  while (stack.pop() !== undefined) count++;
-  return count;
+  if (stack.pop() === undefined) return 0;
+  return 1 + countValues(stack);
 }
 
 export function maxValue(stack: Stack<number>): number {
