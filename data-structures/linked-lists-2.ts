@@ -2,13 +2,11 @@
 import { LinkedList } from './lib/linked-list';
 
 export function getLength<T>(list: LinkedList<T>): number {
-  let current = list;
-  let count = 1;
-  while (current.next) {
-    count++;
-    current = current.next;
-  }
-  return count;
+  if (!list) return 0;
+
+  if (!list.next) return 1;
+
+  return 1 + getLength(list.next);
 }
 
 export function append<T>(list: LinkedList<T>, value: T): void {
