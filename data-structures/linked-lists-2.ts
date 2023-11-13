@@ -27,10 +27,10 @@ export function getTail<T>(list: LinkedList<T>): T | null {
 }
 
 export function includes<T>(list: LinkedList<T>, value: T): boolean {
-  let current = list;
+  let current: LinkedList<T> | null = list;
   while (current) {
     if (current.data === value) return true;
-    current = current.next as LinkedList<T>;
+    current = current.next;
   }
   return false;
 }
