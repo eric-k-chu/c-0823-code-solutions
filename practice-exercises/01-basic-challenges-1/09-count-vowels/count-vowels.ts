@@ -1,3 +1,4 @@
 export function countVowels(str: string): number {
-  return 0;
+  const vowels = str.match(/[aeiouAEIOU]/g);
+  return vowels?.length ?? 0;
 }
