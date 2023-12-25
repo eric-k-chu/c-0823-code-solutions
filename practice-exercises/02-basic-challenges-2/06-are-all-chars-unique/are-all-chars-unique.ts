@@ -1,3 +1,4 @@
 export function areAllCharactersUnique(str: string): boolean {
-  return false;
+  const set = new Set(str);
+  return set.size === str.length;
 }
