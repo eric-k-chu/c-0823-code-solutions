@@ -1,3 +1,4 @@
 export function sumUpTo(n: number): number {
-  return 0;
+  if (n <= 0) return 0;
+  return n + sumUpTo(n - 1);
 }
