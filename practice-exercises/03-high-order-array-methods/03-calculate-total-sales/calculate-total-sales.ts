@@ -8,5 +8,8 @@ export function calculateTotalSalesWithTax(
   products: Product[],
   taxRate: number
 ): number {
-  return 0;
+  return products.reduce(
+    (acc, n) => acc + n.price * n.quantity * (1 + taxRate / 100),
+    0
+  );
 }
